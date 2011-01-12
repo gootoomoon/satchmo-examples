@@ -16,25 +16,25 @@ Executable Factor
     Main-is: Factor.hs
     ghc-options: -threaded
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base, containers, array
+    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
 
 Executable HC
     Main-is: HC.hs
     ghc-options: -threaded
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base, containers, array
+    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
 
 Executable VC
     Main-is: VC.hs
     ghc-options: -threaded
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base, containers, array
+    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
 
 -- Executable QBF
 --    Main-is: QBF.hs
 --    ghc-options: -threaded
 --    hs-source-dirs:	.
---    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base, containers, array
+--    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
 
 
 
