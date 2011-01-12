@@ -1,3 +1,10 @@
+-- | command line arguments: n s
+-- compute vertex cover of size <= s for knight's graph on  n x n  chess board.
+-- (that is, if you put knights there, they control the full board)
+-- example: VC 8 12
+
+{-# language PatternSignatures #-}
+
 import Prelude hiding ( not )
 
 import Satchmo.Relation
@@ -5,22 +12,19 @@ import Satchmo.Code
 import Satchmo.Boolean
 import Satchmo.Counting
 
--- import Satchmo.Solver.Minisat
-import Satchmo.Solver.Funsat
+import Satchmo.Solver.Minisat
+-- import Satchmo.Solver.Funsat
 
 import Control.Monad ( guard )
 import System.Environment
 import System.Timeout
-
--- | command line arguments: n s
--- compute vertex cover of size <= s for knight's graph on  n x n  chess board.
--- example: VC 8 12
+import qualified Data.Array as A
 
 main :: IO ()
 main = do
     argv <- getArgs
     let [ n, s ] = map read argv
-    Just a <- solve $ knight n s
+    Just ( a :: A.Array (Int,Int) Bool ) <- solve $ knight n s
     putStrLn $ table a
 
 knight n s = do

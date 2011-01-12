@@ -1,4 +1,8 @@
-{-# language ScopedTypeVariables #-}
+-- | compute Knight's tour on a rectangular chess board.
+-- example usage: ./dist/build/HC/HC 8 8
+-- should find and print a solution in < 10 seconds.
+
+{-# language PatternSignatures #-}
 
 import Prelude hiding ( not )
 import qualified Prelude
@@ -48,8 +52,6 @@ tour m n = do
                 j <- felder
                 guard $ reaches j k
                 return $ p ! (i,j) 
-  
-
 {-
         forM felder $ \ j -> 
             forM felder $ \ k -> do
@@ -61,12 +63,12 @@ tour m n = do
     return $ do
         a <- decode p
         return $ A.array ((1,1),(m,n)) $ do
-            ((i,p),True) <- A.assocs a
+            ((i :: Int , p::(Int,Int)),True) <- A.assocs a
             return (p,i)
 
-bijection :: (A.Ix a, A.Ix b) 
+bijection :: (A.Ix a, A.Ix b, MonadSAT m) 
                    => ((a,b),(a,b)) 
-                   -> SAT ( Relation a b )
+                   -> m ( Relation a b )
 bijection bnd = do
     let ((u,l),(o,r)) = bnd
     a <- relation bnd

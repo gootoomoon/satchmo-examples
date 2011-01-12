@@ -2,6 +2,8 @@
 -- | run like this: ./test/Factor 1000000000001
 -- (takes 10 .. 20 seconds depending on your CPU)
 
+{-# language PatternSignatures #-}
+
 import Prelude hiding ( not )
 
 import Satchmo.Binary.Op.Fixed 
@@ -15,7 +17,7 @@ import System.Environment
 main :: IO ()
 main = do
     [ n ] <- getArgs
-    res <- solve $ do
+    res :: Maybe [ Integer ] <- solve $ do
         x <- Satchmo.Binary.Op.Flexible.constant $ read n
         a <- number $ width x 
         notone a

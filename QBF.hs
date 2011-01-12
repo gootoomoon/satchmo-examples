@@ -9,7 +9,8 @@
 -- Test cases: "./State 4 2" (satisfiable), "./State 5 2" (unsatisfiable).
 --
 -- Output is an element near the middle of the path.
--- You may check the about half the bits are flipped (if the depth bound is tight).
+-- You may check that about half the bits are flipped 
+-- (if the depth bound is tight).
 
 import Satchmo.Boolean
 import Satchmo.Code
