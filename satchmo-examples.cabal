@@ -36,6 +36,12 @@ Executable PP
     hs-source-dirs:	.
     Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
 
+Executable Life
+    Main-is: Life.hs
+    ghc-options: -threaded -rtsopts
+    hs-source-dirs:	.
+    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+
 -- Executable QBF
 --    Main-is: QBF.hs
 --    ghc-options: -threaded
