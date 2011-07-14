@@ -36,8 +36,14 @@ Executable PP
     hs-source-dirs:	.
     Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
 
-Executable Life
-    Main-is: Life.hs
+Executable Oscillator
+    Main-is: Oscillator.hs
+    ghc-options: -threaded -rtsopts
+    hs-source-dirs:	.
+    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+
+Executable Spaceship
+    Main-is: Spaceship.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
     Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
