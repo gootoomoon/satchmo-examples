@@ -1,8 +1,10 @@
 -- | compute spaceship for Conway's game of life, 
 -- cf. http://www.conwaylife.com/wiki/Category:Oscillators
--- example usage: ./Spaceship 1 1 4 6
 -- arguments are: distanceX, distanceY, max. period
 -- width [, height, [number of life start cells]]
+-- example usage: 
+-- ./Spaceship 1 1 4 6     -- glider
+-- ./Spaceship 0 2 4 7 9 9 -- Conway's lightweight spaceship
 
 {-# language PatternSignatures #-}
 
