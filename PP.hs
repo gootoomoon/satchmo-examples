@@ -13,7 +13,7 @@ import Satchmo.Counting
 
 import qualified Satchmo.Binary as B
 
-import Satchmo.Solver.Minisat
+import Satchmo.SAT.Mini
 
 import Data.List (sort)
 import qualified Data.Array as A

@@ -10,10 +10,10 @@ import qualified Prelude
 
 import Satchmo.Relation
 import Satchmo.Code
-import Satchmo.Boolean
+import Satchmo.Boolean hiding ( equals, implies )
 import Satchmo.Counting
 
-import Satchmo.Solver.Minisat
+import Satchmo.SAT.Mini
 
 import Data.List (sort)
 import qualified Data.Array as A
@@ -41,9 +41,8 @@ printA a = putStrLn $ unlines $ do
              return $ case a A.! (x,y) of
                   True -> "* " ; False -> ". "
 
-osc :: MonadSAT m
-    => Int -> Int -> Int -> Maybe Int
-    -> m ( Decoder [ A.Array (Int,Int) Bool ] )
+osc :: Int -> Int -> Int -> Maybe Int
+    -> SAT ( SAT [ A.Array (Int,Int) Bool ] )
 osc p w h mc = do
     g0 <- relation ((1,1),(w,h))
     case mc of

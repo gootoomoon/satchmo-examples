@@ -8,8 +8,8 @@ import Prelude hiding ( not )
 
 import Satchmo.Binary.Op.Fixed 
 import qualified Satchmo.Binary.Op.Flexible 
-import Satchmo.Solver.Minisat
-import Satchmo.Boolean 
+import Satchmo.SAT.Mini
+import Satchmo.Boolean hiding ( equals )
 import Satchmo.Code
 
 import System.Environment

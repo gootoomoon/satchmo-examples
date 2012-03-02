@@ -7,16 +7,17 @@
 -- ./Spaceship 0 2 4 7 9 9 -- Conway's lightweight spaceship
 
 {-# language PatternSignatures #-}
+{-# language FlexibleContexts #-}
 
 import Prelude hiding ( not, or, and )
 import qualified Prelude
 
 import Satchmo.Relation
 import Satchmo.Code
-import Satchmo.Boolean
+import Satchmo.Boolean hiding ( equals, implies )
 import Satchmo.Counting
 
-import Satchmo.Solver.Minisat
+import Satchmo.SAT.Mini
 
 import Data.List (sort)
 import qualified Data.Array as A
@@ -46,10 +47,7 @@ printA a = putStrLn $ unlines $ do
 
 for = flip map
 
-glide :: MonadSAT m
-    => Int -> Int
-    -> Int -> Int -> Int -> Maybe Int
-    -> m ( Decoder [ A.Array (Int,Int) Bool ] )
+
 glide dx dy p w h mc = do
     g0 <- relation ((1,1),(w,h))
     assert $ map snd $ assocs g0

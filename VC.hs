@@ -12,8 +12,7 @@ import Satchmo.Code
 import Satchmo.Boolean
 import Satchmo.Counting
 
-import Satchmo.Solver.Minisat
--- import Satchmo.Solver.Funsat
+import Satchmo.SAT.Mini
 
 import Control.Monad ( guard )
 import System.Environment

@@ -1,5 +1,5 @@
 Name:           satchmo-examples
-Version:        1.9.0
+Version:        2.1
 
 License:        GPL
 License-file:	gpl-2.0.txt
@@ -16,43 +16,37 @@ Executable Factor
     Main-is: Factor.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+    Build-depends: satchmo>=2.1, process, base == 4.*, containers, array
 
 Executable HC
     Main-is: HC.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+    Build-depends: satchmo>=2.1, process, base == 4.*, containers, array
 
 Executable VC
     Main-is: VC.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+    Build-depends: satchmo>=2.1, process, base == 4.*, containers, array
 
 Executable PP
     Main-is: PP.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+    Build-depends: satchmo>=2.1, process, base == 4.*, containers, array
 
 Executable Oscillator
     Main-is: Oscillator.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+    Build-depends: satchmo>=2.1, process, base == 4.*, containers, array
 
 Executable Spaceship
     Main-is: Spaceship.hs
     ghc-options: -threaded -rtsopts
     hs-source-dirs:	.
-    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
-
--- Executable QBF
---    Main-is: QBF.hs
---    ghc-options: -threaded
---    hs-source-dirs:	.
---    Build-depends: satchmo>=1.8, satchmo-backends>=1.8, process, base == 4.*, containers, array
+    Build-depends: satchmo>=2.1, process, base == 4.*, containers, array
 
 
 

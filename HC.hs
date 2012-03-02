@@ -12,7 +12,7 @@ import Satchmo.Code
 import Satchmo.Boolean
 import Satchmo.Counting
 
-import Satchmo.Solver.Minisat
+import Satchmo.SAT.Mini
 
 import Data.List (sort)
 import qualified Data.Array as A
